@@ -1,0 +1,13 @@
+package caballos;
+
+import javax.swing.JFrame;
+import java.awt.Dimension;
+
+public class ventana extends JFrame {
+	public ventana() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(497, 365));
+		getContentPane().setLayout(null);
+	}
+
+}

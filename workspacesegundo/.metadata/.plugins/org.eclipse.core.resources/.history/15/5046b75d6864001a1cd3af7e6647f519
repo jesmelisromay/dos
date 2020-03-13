@@ -1,0 +1,7 @@
+package num3;
+
+public class excepcion extends Exception{
+	
+	
+
+}

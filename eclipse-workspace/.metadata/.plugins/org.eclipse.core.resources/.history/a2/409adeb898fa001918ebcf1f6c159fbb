@@ -1,0 +1,17 @@
+package caballos;
+
+import javax.swing.JFrame;
+import java.awt.Dimension;
+import javax.swing.JLabel;
+
+public class ventana extends JFrame {
+	public ventana() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(497, 365));
+		getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(30, 60, 46, 14);
+		getContentPane().add(lblNewLabel);
+	}
+}

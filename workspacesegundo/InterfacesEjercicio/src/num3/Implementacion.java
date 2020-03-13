@@ -1,0 +1,72 @@
+package num3;
+
+
+
+public class Implementacion implements Relaciones {
+
+	String frase;
+
+	public Implementacion(String frase) {
+		this.frase = frase;
+	}
+
+	public String getFrase() {
+		return frase;
+	}
+
+	public void setFrase(String frase) {
+		this.frase = frase;
+	}
+
+	public boolean esMayor(Object b) throws excepcion {
+
+		if (!(b instanceof Implementacion)) {
+
+			throw (new excepcion("solo se puede comparar obejectos tipo implementacion"));
+
+		}
+
+		Implementacion a = (Implementacion) b;
+
+		if (frase.length() > a.getFrase().length()) {
+			return true;
+		} else
+			return false;
+
+	}
+
+	public boolean esMenor(Object b) throws excepcion {
+
+		if (!(b instanceof Implementacion)) {
+
+			throw (new excepcion("solo se puede comparar obejectos tipo implementacion"));
+
+		}
+
+		Implementacion a = (Implementacion) b;
+
+		if (frase.length() < a.getFrase().length())
+			return true;
+
+		return false;
+
+	}
+
+	public boolean esIgual(Object b) throws excepcion{
+
+		if (!(b instanceof Implementacion)) {
+
+			throw (new excepcion("solo se puede comparar obejectos tipo implementacion"));
+
+		}
+
+		Implementacion a = (Implementacion) b;
+
+		if (frase.equals(a.getFrase())) {
+			return true;
+		}
+
+		return false;
+
+	}
+}

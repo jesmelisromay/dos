@@ -1,0 +1,7 @@
+package caballos;
+
+import javax.swing.JFrame;
+
+public class ventana extends JFrame {
+
+}

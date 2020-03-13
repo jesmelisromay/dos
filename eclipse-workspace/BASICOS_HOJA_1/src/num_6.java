@@ -1,0 +1,106 @@
+	import java.util.Scanner;
+public class num_6 {
+	
+
+
+
+
+		public static void main(String[] args) {
+			/*6.- Crea una aplicación que nos calcule el área de un círculo, cuadrado 
+			 * o un triángulo. Pediremos de qué figura queremos calcular su área 
+			 * (nos darán una de las tres) y según lo introducido pedirá los valores 
+			 * necesarios para calcular el área. Crea un método por cada figura para 
+			 * calcular cada área que devolverá un número real como valor del área. Muestra 
+			 * el resultado por pantalla. Añade un menú para mejorar el ejercicio. En el menú 
+			 * habrá una opción de salir para poder terminar el programa.
+			
+			Datos para el cálculo del área de cada figura:
+		    • Circulo: (radio^2)*PI
+		    • Triangulo: (base * altura) / 2
+		    • Cuadrado: lado * lado*/
+			
+			Scanner sc = new Scanner(System.in);
+			String figura="";
+			int base,altura, lado, resul;
+			double radio;
+			
+			
+			
+			while (figura != "salir") {
+				figura="";
+				System.out.println("introduzca la figura");
+				figura=sc.nextLine();
+			
+				if (figura.equalsIgnoreCase("circulo") || figura.equalsIgnoreCase("cuadrado") || figura.equalsIgnoreCase("triangulo")) {
+					
+			
+			switch (figura) {
+			case "triangulo":
+				
+				System.out.println("introduzca la base: ");
+				base=sc.nextInt();
+				System.out.println("introduzca la altura: ");
+				altura=sc.nextInt();
+				System.out.println(" el area es " + triangulo(base,altura));
+				
+				
+				break;
+				
+			case "cuadrado":
+				
+				System.out.println("introduzca el lado: ");
+				lado=sc.nextInt();
+				cuadrado(lado);
+				
+							
+				break;
+				
+			case "circulo":
+				
+				System.out.println("introduzca el radio: ");
+				radio=sc.nextDouble();
+				System.out.println("el radio es " + circulo(radio));
+				
+				break;
+			} }
+			
+			
+			else {
+				System.out.println(" debe introducor cuadrado o circulo o rectangulo ");
+
+			}			
+			}
+			
+			}
+			
+			
+			
+			
+		public static int triangulo (int base, int altura) {
+			
+			int resul=
+			 (base * altura) / 2;
+			
+			return resul;
+
+		}
+		
+		public static void cuadrado (int lado) {
+			int resul=
+			lado*2;
+			
+			System.out.println(" el area es "+ resul);
+			
+		}
+
+		public static double circulo (double radio) {
+			
+			double resul=
+					
+					Math.pow(radio, 2) / Math.PI;
+			
+			return resul;
+		}
+	}
+
+

@@ -1,0 +1,50 @@
+package num3;
+
+public class Implementacion implements Relaciones {
+
+	String frase;
+
+	public Implementacion(String frase) {
+		this.frase = frase;
+	}
+	
+	
+
+	public String getFrase() {
+		return frase;
+	}
+
+
+
+
+	public void setFrase(String frase) {
+		this.frase = frase;
+	}
+
+
+
+
+	public boolean esMayor(Object b) {
+
+		if (!(b instanceof Implementacion)) {
+			
+			System.out.println("solo se puede comparar obejectos tipo implementacion");
+			return;
+
+		}
+		
+		b= (Implementacion) b;
+		
+		if(frase.length()>b.)
+			
+		}	
+
+	public boolean esMenor(Object b) {
+
+	}
+
+	public boolean esIgual(Object b) {
+
+	}
+
+}

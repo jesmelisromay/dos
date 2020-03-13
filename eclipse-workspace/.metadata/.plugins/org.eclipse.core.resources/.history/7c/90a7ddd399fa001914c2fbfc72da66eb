@@ -1,0 +1,34 @@
+package caballos;
+
+import javax.swing.JFrame;
+import java.awt.Dimension;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class ventana extends JFrame {
+	public ventana() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(new Dimension(497, 365));
+		getContentPane().setLayout(null);
+		
+		JLabel lblCaballo1 = new JLabel("Caballo1");
+		lblCaballo1.setBounds(30, 60, 46, 14);
+		getContentPane().add(lblCaballo1);
+		
+		JLabel lblCaballo2 = new JLabel("Caballo2 ");
+		lblCaballo2.setBounds(30, 135, 46, 14);
+		getContentPane().add(lblCaballo2);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int y = (int) Math.floor((Math.random() *10 ));
+			}
+		});
+		btnNewButton.setBounds(224, 225, 89, 23);
+		getContentPane().add(btnNewButton);
+		
+	}
+}
